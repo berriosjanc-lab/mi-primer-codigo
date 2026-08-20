@@ -39,25 +39,46 @@
     .brand{
       background:linear-gradient(135deg,#153a78,#215da8);
       color:white;
-      padding:28px 22px 24px;
+      padding:28px 18px 24px;
       text-align:center;
     }
     .logo{
-      font-size:34px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:.07em;
+      font-size:clamp(30px,8.2vw,42px);
       font-weight:300;
-      letter-spacing:.02em;
+      letter-spacing:.015em;
       white-space:nowrap;
       line-height:1;
-      margin-bottom:8px;
+      margin-bottom:10px;
     }
-    .dot{
-      width:.74em;height:.74em;border-radius:50%;display:inline-grid;place-items:center;
-      vertical-align:.05em;border:2px solid rgba(255,255,255,.92);margin:0 .02em;
-      font-size:.62em;font-weight:800;color:white;
+    .logo .space{width:.28em}
+    .logo-o{
+      width:.82em;
+      height:.82em;
+      border-radius:50%;
+      display:inline-block;
+      position:relative;
+      flex:0 0 auto;
+      border:.075em solid #fff;
+      box-shadow:inset 0 0 0 .035em rgba(255,255,255,.35);
     }
-    .yellow{background:var(--yellow)}
-    .red{background:var(--red)}
-    .green{background:var(--green)}
+    .logo-o.yellow{background:var(--yellow)}
+    .logo-o.red{background:var(--red)}
+    .logo-o.green{background:var(--green)}
+    .logo-o.play::after{
+      content:"";
+      position:absolute;
+      left:40%;
+      top:28%;
+      width:0;
+      height:0;
+      border-top:.14em solid transparent;
+      border-bottom:.14em solid transparent;
+      border-left:.22em solid #fff;
+    }
     .site{font-size:14px;letter-spacing:.18em;opacity:.95}
     .identity{padding:24px 22px 18px;text-align:center}
     .identity h1{font-size:28px;margin:0 0 6px;font-weight:700}
@@ -89,14 +110,20 @@
     .thanks{margin:18px 4px 2px;text-align:center;color:#536071;font-size:13px;line-height:1.5}
     .footer{text-align:center;color:#8a94a4;font-size:11px;padding:15px 12px 0}
     button.action{font-family:inherit;cursor:pointer}
-    @media (max-width:360px){.logo{font-size:29px}.grid{grid-template-columns:1fr}.identity h1{font-size:25px}}
+    @media (max-width:360px){.logo{font-size:28px}.grid{grid-template-columns:1fr}.identity h1{font-size:25px}}
   </style>
 </head>
 <body>
   <div class="wrap">
     <main class="card">
       <section class="brand">
-        <div class="logo">R<span class="dot yellow">O</span><span class="dot yellow">O</span>MS TO G<span class="dot red">O</span><span class="dot green">▶</span></div>
+        <div class="logo" aria-label="ROOMS TO GO">
+          <span>R</span><span class="logo-o yellow"></span><span class="logo-o yellow"></span><span>M</span><span>S</span>
+          <span class="space"></span>
+          <span>T</span><span class="logo-o red"></span>
+          <span class="space"></span>
+          <span>G</span><span class="logo-o green play"></span>
+        </div>
         <div class="site">WWW.ROOMSTOGO.PR</div>
       </section>
 
