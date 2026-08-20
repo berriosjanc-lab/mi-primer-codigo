@@ -2,41 +2,147 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#8b0000">
-  <title>Rooms To Go - Vendedor Juan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#163f82">
+  <meta name="description" content="Tarjeta virtual de Juan C. Berrios, Vendedor en Rooms To Go Caguas.">
+  <title>Juan C. Berrios | Rooms To Go Caguas</title>
   <style>
+    :root{
+      --blue:#173f82;
+      --blue2:#1f5aa8;
+      --light:#f4f7fb;
+      --line:#dce5f1;
+      --ink:#172033;
+      --muted:#6f7a8a;
+      --yellow:#f3b51b;
+      --red:#d73535;
+      --green:#7b9d4a;
+    }
     *{box-sizing:border-box}
-    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:linear-gradient(180deg,#fff1f1,#ffffff);color:#2a1a1a;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:22px}
-    .card{width:min(430px,100%);background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 20px 60px rgba(120,20,20,.16);border:1px solid #f0d7d7}
-    .head{background:linear-gradient(135deg,#8b0000,#c62828);color:#fff;text-align:center;padding:30px 22px}
-    .avatar{width:86px;height:86px;border-radius:50%;background:#fff;color:#8b0000;display:grid;place-items:center;margin:0 auto 14px;font-size:30px;font-weight:800}
-    .head h1{margin:0;font-size:28px}.head p{margin:6px 0 0;opacity:.95}.company{font-weight:800;font-size:18px}
-    .body{padding:22px}.item{background:#fff5f5;border-radius:16px;padding:14px 16px;margin-bottom:10px}
-    .label{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#8a6666;margin-bottom:4px}.value{font-size:16px;font-weight:650;word-break:break-word}
-    .btn{display:block;text-align:center;text-decoration:none;padding:15px 16px;border-radius:15px;font-weight:800;margin-top:11px}
-    .primary{background:#8b0000;color:white}.secondary{background:#fff1f1;color:#8b0000;border:1px solid #f0d7d7}
-    .footer{text-align:center;color:#8a6666;font-size:12px;padding:0 20px 22px}
+    html{background:#eef3f9}
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--ink);
+      background:linear-gradient(180deg,#eaf1fa 0%,#f8fbff 52%,#ffffff 100%);
+      padding:22px 16px 36px;
+    }
+    .wrap{width:min(460px,100%);margin:0 auto}
+    .card{
+      background:white;
+      border-radius:26px;
+      overflow:hidden;
+      box-shadow:0 22px 60px rgba(24,63,130,.16);
+      border:1px solid #dfe7f2;
+    }
+    .brand{
+      background:linear-gradient(135deg,#153a78,#215da8);
+      color:white;
+      padding:28px 22px 24px;
+      text-align:center;
+    }
+    .logo{
+      font-size:34px;
+      font-weight:300;
+      letter-spacing:.02em;
+      white-space:nowrap;
+      line-height:1;
+      margin-bottom:8px;
+    }
+    .dot{
+      width:.74em;height:.74em;border-radius:50%;display:inline-grid;place-items:center;
+      vertical-align:.05em;border:2px solid rgba(255,255,255,.92);margin:0 .02em;
+      font-size:.62em;font-weight:800;color:white;
+    }
+    .yellow{background:var(--yellow)}
+    .red{background:var(--red)}
+    .green{background:var(--green)}
+    .site{font-size:14px;letter-spacing:.18em;opacity:.95}
+    .identity{padding:24px 22px 18px;text-align:center}
+    .identity h1{font-size:28px;margin:0 0 6px;font-weight:700}
+    .identity .role{font-size:18px;margin:0;color:#2d3647}
+    .identity .store{font-size:14px;margin:7px 0 0;color:var(--blue);font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+    .divider{height:1px;background:var(--line);margin:0 22px}
+    .body{padding:20px 20px 22px}
+    .primary{
+      display:flex;align-items:center;justify-content:center;gap:10px;
+      width:100%;text-decoration:none;background:var(--blue);color:white;
+      border-radius:16px;padding:16px 18px;font-size:17px;font-weight:800;
+      box-shadow:0 8px 18px rgba(23,63,130,.18);
+    }
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+    .action{
+      display:flex;align-items:center;justify-content:center;gap:8px;min-height:54px;
+      text-decoration:none;color:var(--blue);background:#f1f6fc;border:1px solid #d7e4f3;
+      border-radius:15px;padding:12px 10px;font-weight:750;text-align:center;font-size:14px;
+    }
+    .whatsapp{background:#eef9f1;border-color:#cee9d5;color:#197b3b}
+    .info{margin-top:18px;background:var(--light);border-radius:18px;padding:6px 16px}
+    .row{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid #e3e9f1}
+    .row:last-child{border-bottom:none}
+    .ico{width:26px;flex:0 0 26px;text-align:center;font-size:18px}
+    .meta{min-width:0}
+    .label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:3px}
+    .value{font-size:15px;font-weight:650;line-height:1.35;word-break:break-word}
+    .value a{color:inherit;text-decoration:none}
+    .thanks{margin:18px 4px 2px;text-align:center;color:#536071;font-size:13px;line-height:1.5}
+    .footer{text-align:center;color:#8a94a4;font-size:11px;padding:15px 12px 0}
+    button.action{font-family:inherit;cursor:pointer}
+    @media (max-width:360px){.logo{font-size:29px}.grid{grid-template-columns:1fr}.identity h1{font-size:25px}}
   </style>
 </head>
 <body>
-  <main class="card">
-    <section class="head">
-      <div class="avatar">RTG</div>
-      <h1>Vendedor Juan</h1>
-      <p>Sales Professional</p>
-      <p class="company">Rooms To Go</p>
-    </section>
-    <section class="body">
-      <div class="item"><div class="label">Celular</div><div class="value">787-518-4192</div></div>
-      <div class="item"><div class="label">Trabajo</div><div class="value">787-653-1999</div></div>
-      <div class="item"><div class="label">Email</div><div class="value">berriosjanc@gmail.com</div></div>
-      <a class="btn primary" href="juan-c-berrios.vcf">Guardar contacto</a>
-      <a class="btn secondary" href="tel:+17875184192">Llamar al celular</a>
-      <a class="btn secondary" href="tel:+17876531999">Llamar a Rooms To Go</a>
-      <a class="btn secondary" href="mailto:berriosjanc@gmail.com">Enviar email</a>
-    </section>
-    <div class="footer">Rooms To Go · Vendedor Juan</div>
-  </main>
+  <div class="wrap">
+    <main class="card">
+      <section class="brand">
+        <div class="logo">R<span class="dot yellow">O</span><span class="dot yellow">O</span>MS TO G<span class="dot red">O</span><span class="dot green">▶</span></div>
+        <div class="site">WWW.ROOMSTOGO.PR</div>
+      </section>
+
+      <section class="identity">
+        <h1>Juan C. Berrios</h1>
+        <p class="role">Vendedor</p>
+        <p class="store">Rooms To Go · Caguas</p>
+      </section>
+
+      <div class="divider"></div>
+
+      <section class="body">
+        <a class="primary" href="juan-c-berrios.vcf">💾 Guardar contacto</a>
+
+        <div class="grid">
+          <a class="action whatsapp" href="https://wa.me/17875184192?text=Hola%20Juan%2C%20te%20contacto%20por%20Rooms%20To%20Go" target="_blank" rel="noopener">💬 WhatsApp</a>
+          <a class="action" href="tel:+17875184192">📱 Llamar a Juan</a>
+          <a class="action" href="tel:+17876531999">☎️ Llamar tienda</a>
+          <a class="action" href="mailto:berriosjanc@gmail.com?subject=Rooms%20To%20Go">✉️ Enviar email</a>
+          <a class="action" href="https://www.google.com/maps/search/?api=1&query=Rooms+To+Go+Caguas+Ave+Luis+Munoz+Marin+Lote+E-9+Caguas+PR+00725" target="_blank" rel="noopener">📍 Cómo llegar</a>
+          <a class="action" href="https://www.roomstogo.pr" target="_blank" rel="noopener">🌐 RoomsToGo.pr</a>
+        </div>
+
+        <div class="info">
+          <div class="row">
+            <div class="ico">📱</div>
+            <div class="meta"><div class="label">Celular</div><div class="value"><a href="tel:+17875184192">787-518-4192</a></div></div>
+          </div>
+          <div class="row">
+            <div class="ico">☎️</div>
+            <div class="meta"><div class="label">Rooms To Go Caguas</div><div class="value"><a href="tel:+17876531999">787-653-1999</a></div></div>
+          </div>
+          <div class="row">
+            <div class="ico">✉️</div>
+            <div class="meta"><div class="label">Email</div><div class="value"><a href="mailto:berriosjanc@gmail.com">berriosjanc@gmail.com</a></div></div>
+          </div>
+          <div class="row">
+            <div class="ico">📍</div>
+            <div class="meta"><div class="label">Tienda</div><div class="value">Ave. Luis Muñoz Marín, Lote E-9<br>Caguas, PR 00725</div></div>
+          </div>
+        </div>
+
+        <p class="thanks">Gracias por visitarnos. Guarda mi contacto y escríbeme cuando necesites ayuda con tu próxima compra.</p>
+      </section>
+    </main>
+    <div class="footer">Tarjeta virtual · Juan C. Berrios · Rooms To Go Caguas</div>
+  </div>
 </body>
 </html>
