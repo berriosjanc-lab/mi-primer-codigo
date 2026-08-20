@@ -1,11 +1,13 @@
 BEGIN:VCARD
 VERSION:3.0
-N:Vendedor Juan;Rooms To Go;;;
-FN:Rooms To Go - Vendedor Juan
+N:Berrios;Juan C.;;;
+FN:Juan C. Berrios | Rooms To Go
 ORG:Rooms To Go
-TITLE:Sales Professional
+TITLE:Vendedor
 TEL;TYPE=CELL:+17875184192
 TEL;TYPE=WORK:+17876531999
 EMAIL;TYPE=INTERNET:berriosjanc@gmail.com
-NOTE:Juan C Berrios
+ADR;TYPE=WORK:;;Ave. Luis Muñoz Marín Lote E-9;Caguas;PR;00725;Puerto Rico
+URL:https://www.roomstogo.pr
+NOTE:Rooms To Go Caguas
 END:VCARD
